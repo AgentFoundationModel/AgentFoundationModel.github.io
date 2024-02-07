@@ -292,7 +292,6 @@ We fine-tuned our model on healthcare data and find that pre-training on robotic
   :html_container_class: column
   :END:
 
-  #@@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/healthcare1.mpf_frame_0.png" type="video/mp4"> </video>@@
   @@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/1-anon.mp4" type="video/mp4"> </video>@@
 
 
@@ -321,7 +320,7 @@ We fine-tuned our model on healthcare data and find that pre-training on robotic
   :END:
 
   @@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/2-anon.mp4" type="video/mp4"> </video>@@
-  #@@html:<image src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" width="100%">@@
+
  
 
 *** Actions
@@ -351,7 +350,7 @@ We fine-tuned our model on healthcare data and find that pre-training on robotic
   :END:
 
   @@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/3-anon.mp4" type="video/mp4"> </video>@@
-  # @@html:<image src="AVL_Example_Videos/healthcare/frame_0.jpg" width="100%">@@
+
 
 
 *** Actions
