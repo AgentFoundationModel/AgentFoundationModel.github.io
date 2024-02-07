@@ -1,0 +1,205 @@
+#+title: An Interactive Agent Foundation Model
+#+author: Bidipta Sarkar
+#+email: bidiptas@stanford.edu
+#+description: An Interactive Agent Foundation Model
+#+KEYWORDS: homepage, website, research, AI
+#+LANGUAGE:  en
+#+OPTIONS: email:t toc:nil num:nil html-postamble:nil html-style:nil title:nil \n:t H:3
+#+startup: inlineimages
+#+EXPORT_FILE_NAME: index
+
+#+PROPERTY:  header-args :eval never-export
+
+#+INCLUDE: "header.org"
+
+
+@@html:<div class="row"><h2 class="col-md-12 text-center"><strong><font size="+4r">@@  An Interactive Agent Foundation Model @@html:</font></strong></h2></div>@@
+
+
+#+html: <div class="row"> <div class="col-md-12 text-center">
+#+attr_html: :class list-inline
+- Zane Durante
+- Bidipta Sarkar
+- Ran Gong
+- Rohan Taori
+- Yusuke Noda
+- Paul Tang
+- Ehsan Adeli
+- Shrinidhi Kowshika Lakshmikanth
+- Kevin Schulman
+- Arnold Milstein
+- Demetri Terzopoulos
+- Ade Famoti
+- Noboru Kuno
+- Ashley Llorens
+- Hoi Vo
+- Katsu Ikeuchi
+- Li Fei-Fei
+- Jianfeng Gao
+- Naoki Wake
+- Qiuyuan Huang
+
+
+# @@html:<br><a href="https://stanford.edu"><image src="img/stanford_logo.png" height="55px"> </a><a href="http://iliad.stanford.edu"> <image src="img/iliad.png" height="40px"> </a><br>@@
+#+html: </div> </div>
+
+
+#+html: <div class="row"> <div class="col-md-12 text-center">
+#+attr_html: :class list-inline
+- @@html:<image src="img/msr_logo.gif" height="55px">@@
+- @@html:<image src="img/stanford_logo.png" height="48px">@@
+- @@html:<image src="img/ucla_logo.png" height="48px">@@
+#+html: </div> </div>
+
+#+html: <div class="row"> <div class="col-md-4 col-md-offset-4 text-center">
+#+attr_html: :class nav nav-pills nav-justified
+- @@html:<a href="pdfs/paper.pdf"><image src="img/paper.png" height="60px"><h4><strong>Paper</strong></h4></a>@@
+- @@html:<image src="img/huggingface.svg" height="60px"><h4><strong>Model (Coming Soon!)</strong></h4>@@
+# - @@html:<a href="https://youtu.be/wm4f0sdKIUA"><image src="img/youtube_icon.png" height="60px"><h4><strong>Video</strong></h4></a>@@
+# - @@html:<a href="https://github.com/Stanford-ILIAD/Diverse-Conventions"><image src="img/GitHub-Mark.png" height="60px"><h4><strong>Code</strong></h4></a>@@
+#+html: </div></div>
+
+#+html: <div class="row"> <div class="col-md-8 col-md-offset-2">
+
+# #+BEGIN_export html
+
+# <div style="position:relative;padding-top:56.25%;">
+#               <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/UuKAp9a6wMs" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> -->
+# 	      <iframe src="https://www.youtube.com/embed/wm4f0sdKIUA?si=ZCvJyvJLZsCa3FjH" width="560" height="315" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+#             </div>
+# #+END_export
+
+* 
+
+** Abstract
+
+The development of artificial intelligence systems is transitioning from creating static, task-specific models to dynamic, agent-based systems capable of performing well in a wide range of applications. We propose an Interactive Agent Foundation Model that uses a novel multi-task agent training paradigm for training AI agents across a wide range of domains, datasets, and tasks. Our training paradigm unifies diverse pre-training strategies, including visual masked auto-encoders, language modeling, and next-action prediction, enabling a versatile and adaptable AI framework. We demonstrate the performance of our framework across three separate domains -- Robotics, Gaming AI, and Healthcare. Our model demonstrates its ability to generate meaningful and contextually relevant outputs in each area. The strength of our approach lies in its generality, leveraging a variety of data sources such as robotics sequences, gameplay data, large-scale video datasets, and textual information for effective multimodal and multi-task learning. Our approach provides a promising avenue for developing generalist, action-taking, multimodal systems.
+
+** Robotics Examples
+
+FILLER TEXT
+
+
+** Gaming Examples
+
+FILLER TEXT
+
+** Healthcare Examples
+
+FILLER TEXT
+
+ 
+** Human-AI Interaction Videos (OLD - REPLACE, just kept as code reference!)
+
+In the following videos, a human controls the blue player while a trained AI controls the green player. Self-play and Statistical Diversity are baselines while XP and CoMeDi are our techniques.
+
+
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
+
+*** CoMeDi (Ours)
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="img/MP_new.mp4" type="video/mp4"> </video>@@
+
+
+*** Cross-Play Min (XP)
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="img/XP_new.mp4" type="video/mp4"> </video>@@
+
+
+*** Statistical Diversity (ADAP)
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="img/ADAP_new.mp4" type="video/mp4"> </video>@@
+
+
+*** Self-Play (SP)
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="img/SP_new.mp4" type="video/mp4"> </video>@@
+
+
+
+** Other examples
+
+FILLER TEXT
+
+Example Table
+
+| Col 1     | Col 2          | Col 3         |
+|-----------+----------------+---------------|
+| SOMETHING | SOMETHING ELSE | ANOTHER THING |
+| NEXT ROW  | SDFLKJ         | LDKFSJLK      |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#+html: </div>
+
+#+html:</div></div></div>
+# #+BEGIN_export html
+# <div class="row">
+# 	  <div class="col-md-8 col-md-offset-2">
+#             <h3>
+#               Citation
+#             </h3>
+#             <div class="form-group col-md-10 col-md-offset-1">
+#               <textarea id="bibtex" class="form-control" readonly>@inproceedings{sarkar2023diverse,
+# 	title={Diverse Conventions for Human-{AI} Collaboration},
+# 	author={Bidipta Sarkar and Andy Shih and Dorsa Sadigh},
+# 	booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+# 	year={2023}
+# }</textarea>
+#             </div>
+# 	  </div>
+	  
+# 	</div>
+# #+END_export
+#+BEGIN_export html
+	<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+            <!-- <h3> -->
+              <!--     Acknowledgements -->
+              <!-- </h3> -->
+            <p class="text-justify">
+              <br><br>
+              The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a> and <a href="https://robotics-transformer.github.io/">RT-1</a>
+            </p>
+	  </div>
+	</div>
+#+END_export
+
+# Local Variables:
+# eval: (add-hook 'after-save-hook (lambda nil (when (y-or-n-p "Tangle?") (org-html-export-to-html))) nil t)
+# End:
