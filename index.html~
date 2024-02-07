@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-02-07 Wed 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>An Interactive Agent Foundation Model</title>
+<meta name="author" content="Bidipta Sarkar" />
+<meta name="description" content="An Interactive Agent Foundation Model" />
+<meta name="keywords" content="homepage, website, research, AI" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="main" class="container">
+
+
+<p>
+<div class="row"><h2 class="col-md-12 text-center"><strong><font size="+4r">  An Interactive Agent Foundation Model </font></strong></h2></div><br />
+</p>
+
+
+<div class="row"> <div class="col-md-12 text-center">
+<ul class="org-ul list-inline">
+<li>Zane Durante<br /></li>
+<li>Bidipta Sarkar<br /></li>
+<li>Ran Gong<br /></li>
+<li>Rohan Taori<br /></li>
+<li>Yusuke Noda<br /></li>
+<li>Paul Tang<br /></li>
+<li>Ehsan Adeli<br /></li>
+<li>Shrinidhi Kowshika Lakshmikanth<br /></li>
+<li>Kevin Schulman<br /></li>
+<li>Arnold Milstein<br /></li>
+<li>Demetri Terzopoulos<br /></li>
+<li>Ade Famoti<br /></li>
+<li>Noboru Kuno<br /></li>
+<li>Ashley Llorens<br /></li>
+<li>Hoi Vo<br /></li>
+<li>Katsu Ikeuchi<br /></li>
+<li>Li Fei-Fei<br /></li>
+<li>Jianfeng Gao<br /></li>
+<li>Naoki Wake<br /></li>
+<li>Qiuyuan Huang<br /></li>
+</ul>
+
+
+</div> </div>
+
+
+<div class="row"> <div class="col-md-12 text-center">
+<ul class="org-ul list-inline">
+<li><image src="img/msr_logo.gif" height="55px"><br /></li>
+<li><image src="img/stanford_logo.png" height="48px"><br /></li>
+<li><image src="img/ucla_logo.png" height="48px"><br /></li>
+</ul>
+</div> </div>
+
+<div class="row"> <div class="col-md-4 col-md-offset-4 text-center">
+<ul class="org-ul nav nav-pills nav-justified">
+<li><a href="pdfs/paper.pdf"><image src="img/paper.png" height="60px"><h4><strong>Paper</strong></h4></a><br /></li>
+<li><image src="img/huggingface.svg" height="60px"><h4><strong>Model (Coming Soon!)</strong></h4><br /></li>
+</ul>
+
+</div></div>
+
+<div class="row"> <div class="col-md-8 col-md-offset-2">
+
+<div id="outline-container-orga2ba325" class="outline-2">
+<h2 id="orga2ba325"></h2>
+<div class="outline-text-2" id="text-orga2ba325">
+</div>
+<div id="outline-container-org7fad1e8" class="outline-3">
+<h3 id="org7fad1e8">Abstract</h3>
+<div class="outline-text-3" id="text-org7fad1e8">
+<p>
+The development of artificial intelligence systems is transitioning from creating static, task-specific models to dynamic, agent-based systems capable of performing well in a wide range of applications. We propose an Interactive Agent Foundation Model that uses a novel multi-task agent training paradigm for training AI agents across a wide range of domains, datasets, and tasks. Our training paradigm unifies diverse pre-training strategies, including visual masked auto-encoders, language modeling, and next-action prediction, enabling a versatile and adaptable AI framework. We demonstrate the performance of our framework across three separate domains &#x2013; Robotics, Gaming AI, and Healthcare. Our model demonstrates its ability to generate meaningful and contextually relevant outputs in each area. The strength of our approach lies in its generality, leveraging a variety of data sources such as robotics sequences, gameplay data, large-scale video datasets, and textual information for effective multimodal and multi-task learning. Our approach provides a promising avenue for developing generalist, action-taking, multimodal systems.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org939561c" class="outline-3">
+<h3 id="org939561c">Robotics Examples</h3>
+<div class="outline-text-3" id="text-org939561c">
+<p>
+We pre-train our model on the CALVIN and Language Table Datasets. Below we show example successful rollouts of our policy in randomized initial conditions in both environments.<br />
+</p>
+
+<p>
+CALVIN:<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc05706f" class="outline-3 irow">
+<h3 id="orgc05706f"></h3>
+<div class="outline-text-3" id="text-orgc05706f">
+</div>
+
+<div id="outline-container-org51b671e" class="outline-4 column">
+<h4 id="org51b671e">Open Drawer</h4>
+<div class="outline-text-4" id="text-org51b671e">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/open_drawer_1706692234.1586585.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgbd19d8a" class="outline-4 column">
+<h4 id="orgbd19d8a">Move Slider Right</h4>
+<div class="outline-text-4" id="text-orgbd19d8a">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/move_slider_right_1706691956.3111706.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org3eeb1b3" class="outline-4 column">
+<h4 id="org3eeb1b3">Lift Red Block</h4>
+<div class="outline-text-4" id="text-org3eeb1b3">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/lift_red_block_slider_1706690975.078765.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1d6e144" class="outline-4 column">
+<h4 id="org1d6e144">Close Drawer</h4>
+<div class="outline-text-4" id="text-org1d6e144">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/close_drawer_1706690941.4207315.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc12ac43" class="outline-3">
+<h3 id="orgc12ac43"></h3>
+<div class="outline-text-3" id="text-orgc12ac43">
+<p>
+Language Table:<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org884feb2" class="outline-3 irow">
+<h3 id="org884feb2"></h3>
+<div class="outline-text-3" id="text-org884feb2">
+</div>
+
+<div id="outline-container-orge0581f7" class="outline-4 column">
+<h4 id="orge0581f7">Block to Absolute Location</h4>
+<div class="outline-text-4" id="text-orge0581f7">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/blocktoabsolutelocation_41_success.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org36dfc33" class="outline-4 column">
+<h4 id="org36dfc33">Block to Block</h4>
+<div class="outline-text-4" id="text-org36dfc33">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/blocktoblock_47_success.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c6db3d" class="outline-4 column">
+<h4 id="org3c6db3d">Block to Relative Location</h4>
+<div class="outline-text-4" id="text-org3c6db3d">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/blocktorelativelocation_27_success.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org94be538" class="outline-4 column">
+<h4 id="org94be538">Separate Blocks</h4>
+<div class="outline-text-4" id="text-org94be538">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/separate_27_success.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org0513663" class="outline-3">
+<h3 id="org0513663">Gaming Examples</h3>
+<div class="outline-text-3" id="text-org0513663">
+<p>
+We also pre-train our model on datasets of Minecraft and Bleeding Edge videos annotated with actions. Below we show example predicted actions from our policy compared to ground truth actions taken by a player following specific instructions.<br />
+</p>
+
+
+<p>
+Minecraft Task: The player is using an iron sword to attack and kill pigs in a forest &#x2026;<br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org699edf3" class="outline-3 irow">
+<h3 id="org699edf3"></h3>
+<div class="outline-text-3" id="text-org699edf3">
+</div>
+
+<div id="outline-container-org03dd017" class="outline-4 column">
+<h4 id="org03dd017">Video</h4>
+<div class="outline-text-4" id="text-org03dd017">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/minecraft_15/minecraft.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5265c9a" class="outline-4 column">
+<h4 id="org5265c9a">Actions</h4>
+<div class="outline-text-4" id="text-org5265c9a">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Ground Truth</th>
+<th scope="col" class="org-left">Predicted Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">[CAMERAX7]</td>
+<td class="org-left">[CAMERAX4]</td>
+</tr>
+
+<tr>
+<td class="org-left">[CAMERAY22]</td>
+<td class="org-left">[CAMERAY9]</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[CAMERAX0]</td>
+<td class="org-left">[CAMERAX4]</td>
+</tr>
+
+<tr>
+<td class="org-left">[CAMERAY2]</td>
+<td class="org-left">[CAMERAY23]</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[attack]</td>
+<td class="org-left">[attack]</td>
+</tr>
+
+<tr>
+<td class="org-left">[CAMERAX-1]</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">[CAMERAY2]</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[attack]</td>
+<td class="org-left">[attack]</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[attack]</td>
+<td class="org-left">[attack]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge995b2c" class="outline-3">
+<h3 id="orge995b2c"></h3>
+<div class="outline-text-3" id="text-orge995b2c">
+<p>
+Bleeding Edge Task: The player is controlling a red robot &#x2026; fighting other characters &#x2026;<br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org36ae1c8" class="outline-3 irow">
+<h3 id="org36ae1c8"></h3>
+<div class="outline-text-3" id="text-org36ae1c8">
+</div>
+
+<div id="outline-container-orgde8bc94" class="outline-4 column">
+<h4 id="orgde8bc94">Video</h4>
+<div class="outline-text-4" id="text-orgde8bc94">
+<p>
+<video width="100%" controls> <source src="AVL_Example_Videos/be_88/be.mp4" type="video/mp4"> </video><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd1125f" class="outline-4 column">
+<h4 id="orgdd1125f">Actions</h4>
+<div class="outline-text-4" id="text-orgdd1125f">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Ground Truth</th>
+<th scope="col" class="org-left">Predicted Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">[lockon][meleeattack] [lrot159] [lmag4]</td>
+<td class="org-left">[specialability2] [lrot216] [lmag4]</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[lockon][meleeattack] [lrot159] [lmag4]</td>
+<td class="org-left">[lockon][meleeattack] [lrot159] [lmag4]</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[lockon][meleeattack] [lrot159] [lmag4]</td>
+<td class="org-left">[lockon][meleeattack] [lrot159] [lmag4]</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">[lockon][meleeattack] [lrot160] [lmag4]</td>
+<td class="org-left">[lockon][meleeattack] [lrot162] [lmag4]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org58411f8" class="outline-3">
+<h3 id="org58411f8">Healthcare Examples</h3>
+<div class="outline-text-3" id="text-org58411f8">
+<p>
+We fine-tuned our model on healthcare data and find that pre-training on robotics and gaming datasets provides some positive transfer for predicting actions. Below we show examples of our fine-tuned model performing various tasks in healthcare.<br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgbc7d669" class="outline-3">
+<h3 id="orgbc7d669"></h3>
+<div class="outline-text-3" id="text-orgbc7d669">
+<p>
+<i>Video Captioning</i><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9c30304" class="outline-3 irow">
+<h3 id="org9c30304"></h3>
+<div class="outline-text-3" id="text-org9c30304">
+</div>
+
+<div id="outline-container-org3d27167" class="outline-4 column">
+<h4 id="org3d27167">Video</h4>
+<div class="outline-text-4" id="text-org3d27167">
+<p>
+<image src="AVL_Example_Videos/healthcare/healthcare1.mp4_frame0.png" width="100%"><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgf404390" class="outline-4 column">
+<h4 id="orgf404390">Actions</h4>
+<div class="outline-text-4" id="text-orgf404390">
+<p>
+The patient is awake and calm. The patient is cooperative. The patient is alert.<br />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf61aec9" class="outline-3">
+<h3 id="orgf61aec9"></h3>
+<div class="outline-text-3" id="text-orgf61aec9">
+<p>
+<i>Video Question Answering</i><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd684bc6" class="outline-3 irow">
+<h3 id="orgd684bc6"></h3>
+<div class="outline-text-3" id="text-orgd684bc6">
+</div>
+
+<div id="outline-container-orge0dd871" class="outline-4 column">
+<h4 id="orge0dd871">Video</h4>
+<div class="outline-text-4" id="text-orge0dd871">
+<p>
+<image src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" width="100%"><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgaf82272" class="outline-4 column">
+<h4 id="orgaf82272">Actions</h4>
+<div class="outline-text-4" id="text-orgaf82272">
+<p>
+Q: Where is the patient? A: patient is in deep sedation. The patient likely requires assistance.<br />
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org19e64ff" class="outline-3">
+<h3 id="org19e64ff"></h3>
+<div class="outline-text-3" id="text-org19e64ff">
+<p>
+<i>Action recognition (RASS)</i><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc62d27d" class="outline-3 irow">
+<h3 id="orgc62d27d"></h3>
+<div class="outline-text-3" id="text-orgc62d27d">
+</div>
+
+<div id="outline-container-orgec8d889" class="outline-4 column">
+<h4 id="orgec8d889">Video</h4>
+<div class="outline-text-4" id="text-orgec8d889">
+<p>
+<image src="AVL_Example_Videos/healthcare/frame_0.jpg" width="100%"><br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org678c5a2" class="outline-4 column">
+<h4 id="org678c5a2">Actions</h4>
+<div class="outline-text-4" id="text-org678c5a2">
+<p>
+0 - Alert and calm<br />
+</p>
+
+</div>
+
+</div></div></div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <!-- <h3> -->
+      <!--     Acknowledgements -->
+      <!-- </h3> -->
+    <p class="text-justify">
+      <br><br>
+      The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

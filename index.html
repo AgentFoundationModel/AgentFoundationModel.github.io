@@ -3,14 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-02-07 Wed 00:29 -->
+<!-- 2024-02-07 Wed 12:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>An Interactive Agent Foundation Model</title>
+<meta name="generator" content="Org mode" />
 <meta name="author" content="Bidipta Sarkar" />
-<meta name="description" content="An Interactive Agent Foundation Model" />
+<meta name="description" content="An Interactive Agent Foundation Model"
+ />
 <meta name="keywords" content="homepage, website, research, AI" />
-<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
@@ -21,9 +22,55 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
 <script src="js/app.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
 </head>
 <body>
-<div id="content" class="content">
+<div id="content">
 <div id="main" class="container">
 
 
@@ -78,22 +125,22 @@
 
 <div class="row"> <div class="col-md-8 col-md-offset-2">
 
-<div id="outline-container-orga2ba325" class="outline-2">
-<h2 id="orga2ba325"></h2>
-<div class="outline-text-2" id="text-orga2ba325">
+<div id="outline-container-orge265678" class="outline-2">
+<h2 id="orge265678"></h2>
+<div class="outline-text-2" id="text-orge265678">
 </div>
-<div id="outline-container-org7fad1e8" class="outline-3">
-<h3 id="org7fad1e8">Abstract</h3>
-<div class="outline-text-3" id="text-org7fad1e8">
+<div id="outline-container-orga588716" class="outline-3">
+<h3 id="orga588716">Abstract</h3>
+<div class="outline-text-3" id="text-orga588716">
 <p>
 The development of artificial intelligence systems is transitioning from creating static, task-specific models to dynamic, agent-based systems capable of performing well in a wide range of applications. We propose an Interactive Agent Foundation Model that uses a novel multi-task agent training paradigm for training AI agents across a wide range of domains, datasets, and tasks. Our training paradigm unifies diverse pre-training strategies, including visual masked auto-encoders, language modeling, and next-action prediction, enabling a versatile and adaptable AI framework. We demonstrate the performance of our framework across three separate domains &#x2013; Robotics, Gaming AI, and Healthcare. Our model demonstrates its ability to generate meaningful and contextually relevant outputs in each area. The strength of our approach lies in its generality, leveraging a variety of data sources such as robotics sequences, gameplay data, large-scale video datasets, and textual information for effective multimodal and multi-task learning. Our approach provides a promising avenue for developing generalist, action-taking, multimodal systems.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org939561c" class="outline-3">
-<h3 id="org939561c">Robotics Examples</h3>
-<div class="outline-text-3" id="text-org939561c">
+<div id="outline-container-org456670e" class="outline-3">
+<h3 id="org456670e">Robotics Examples</h3>
+<div class="outline-text-3" id="text-org456670e">
 <p>
 We pre-train our model on the CALVIN and Language Table Datasets. Below we show example successful rollouts of our policy in randomized initial conditions in both environments.<br />
 </p>
@@ -104,14 +151,14 @@ CALVIN:<br />
 </div>
 </div>
 
-<div id="outline-container-orgc05706f" class="outline-3 irow">
-<h3 id="orgc05706f"></h3>
-<div class="outline-text-3" id="text-orgc05706f">
+<div id="outline-container-org8d476cd" class="outline-3 irow">
+<h3 id="org8d476cd"></h3>
+<div class="outline-text-3" id="text-org8d476cd">
 </div>
 
-<div id="outline-container-org51b671e" class="outline-4 column">
-<h4 id="org51b671e">Open Drawer</h4>
-<div class="outline-text-4" id="text-org51b671e">
+<div id="outline-container-org5ee4db5" class="outline-4 column">
+<h4 id="org5ee4db5">Open Drawer</h4>
+<div class="outline-text-4" id="text-org5ee4db5">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/open_drawer_1706692234.1586585.mp4" type="video/mp4"> </video><br />
 </p>
@@ -119,9 +166,9 @@ CALVIN:<br />
 </div>
 
 
-<div id="outline-container-orgbd19d8a" class="outline-4 column">
-<h4 id="orgbd19d8a">Move Slider Right</h4>
-<div class="outline-text-4" id="text-orgbd19d8a">
+<div id="outline-container-orga575fb8" class="outline-4 column">
+<h4 id="orga575fb8">Move Slider Right</h4>
+<div class="outline-text-4" id="text-orga575fb8">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/move_slider_right_1706691956.3111706.mp4" type="video/mp4"> </video><br />
 </p>
@@ -129,9 +176,9 @@ CALVIN:<br />
 </div>
 
 
-<div id="outline-container-org3eeb1b3" class="outline-4 column">
-<h4 id="org3eeb1b3">Lift Red Block</h4>
-<div class="outline-text-4" id="text-org3eeb1b3">
+<div id="outline-container-orgf817b90" class="outline-4 column">
+<h4 id="orgf817b90">Lift Red Block</h4>
+<div class="outline-text-4" id="text-orgf817b90">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/lift_red_block_slider_1706690975.078765.mp4" type="video/mp4"> </video><br />
 </p>
@@ -139,9 +186,9 @@ CALVIN:<br />
 </div>
 
 
-<div id="outline-container-org1d6e144" class="outline-4 column">
-<h4 id="org1d6e144">Close Drawer</h4>
-<div class="outline-text-4" id="text-org1d6e144">
+<div id="outline-container-org6a9babf" class="outline-4 column">
+<h4 id="org6a9babf">Close Drawer</h4>
+<div class="outline-text-4" id="text-org6a9babf">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/close_drawer_1706690941.4207315.mp4" type="video/mp4"> </video><br />
 </p>
@@ -150,23 +197,23 @@ CALVIN:<br />
 </div>
 
 
-<div id="outline-container-orgc12ac43" class="outline-3">
-<h3 id="orgc12ac43"></h3>
-<div class="outline-text-3" id="text-orgc12ac43">
+<div id="outline-container-org032d54b" class="outline-3">
+<h3 id="org032d54b"></h3>
+<div class="outline-text-3" id="text-org032d54b">
 <p>
 Language Table:<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org884feb2" class="outline-3 irow">
-<h3 id="org884feb2"></h3>
-<div class="outline-text-3" id="text-org884feb2">
+<div id="outline-container-org8762406" class="outline-3 irow">
+<h3 id="org8762406"></h3>
+<div class="outline-text-3" id="text-org8762406">
 </div>
 
-<div id="outline-container-orge0581f7" class="outline-4 column">
-<h4 id="orge0581f7">Block to Absolute Location</h4>
-<div class="outline-text-4" id="text-orge0581f7">
+<div id="outline-container-org1c4451e" class="outline-4 column">
+<h4 id="org1c4451e">Block to Absolute Location</h4>
+<div class="outline-text-4" id="text-org1c4451e">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/blocktoabsolutelocation_41_success.mp4" type="video/mp4"> </video><br />
 </p>
@@ -174,18 +221,18 @@ Language Table:<br />
 </div>
 
 
-<div id="outline-container-org36dfc33" class="outline-4 column">
-<h4 id="org36dfc33">Block to Block</h4>
-<div class="outline-text-4" id="text-org36dfc33">
+<div id="outline-container-orgb5d0a57" class="outline-4 column">
+<h4 id="orgb5d0a57">Block to Block</h4>
+<div class="outline-text-4" id="text-orgb5d0a57">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/blocktoblock_47_success.mp4" type="video/mp4"> </video><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3c6db3d" class="outline-4 column">
-<h4 id="org3c6db3d">Block to Relative Location</h4>
-<div class="outline-text-4" id="text-org3c6db3d">
+<div id="outline-container-orgd4c61c0" class="outline-4 column">
+<h4 id="orgd4c61c0">Block to Relative Location</h4>
+<div class="outline-text-4" id="text-orgd4c61c0">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/blocktorelativelocation_27_success.mp4" type="video/mp4"> </video><br />
 </p>
@@ -193,9 +240,9 @@ Language Table:<br />
 </div>
 
 
-<div id="outline-container-org94be538" class="outline-4 column">
-<h4 id="org94be538">Separate Blocks</h4>
-<div class="outline-text-4" id="text-org94be538">
+<div id="outline-container-orgca61d71" class="outline-4 column">
+<h4 id="orgca61d71">Separate Blocks</h4>
+<div class="outline-text-4" id="text-orgca61d71">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/separate_27_success.mp4" type="video/mp4"> </video><br />
 </p>
@@ -206,9 +253,9 @@ Language Table:<br />
 
 
 
-<div id="outline-container-org0513663" class="outline-3">
-<h3 id="org0513663">Gaming Examples</h3>
-<div class="outline-text-3" id="text-org0513663">
+<div id="outline-container-org866e78b" class="outline-3">
+<h3 id="org866e78b">Gaming Examples</h3>
+<div class="outline-text-3" id="text-org866e78b">
 <p>
 We also pre-train our model on datasets of Minecraft and Bleeding Edge videos annotated with actions. Below we show example predicted actions from our policy compared to ground truth actions taken by a player following specific instructions.<br />
 </p>
@@ -221,14 +268,14 @@ Minecraft Task: The player is using an iron sword to attack and kill pigs in a f
 </div>
 
 
-<div id="outline-container-org699edf3" class="outline-3 irow">
-<h3 id="org699edf3"></h3>
-<div class="outline-text-3" id="text-org699edf3">
+<div id="outline-container-orgba96718" class="outline-3 irow">
+<h3 id="orgba96718"></h3>
+<div class="outline-text-3" id="text-orgba96718">
 </div>
 
-<div id="outline-container-org03dd017" class="outline-4 column">
-<h4 id="org03dd017">Video</h4>
-<div class="outline-text-4" id="text-org03dd017">
+<div id="outline-container-orgde170f4" class="outline-4 column">
+<h4 id="orgde170f4">Video</h4>
+<div class="outline-text-4" id="text-orgde170f4">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/minecraft_15/minecraft.mp4" type="video/mp4"> </video><br />
 </p>
@@ -236,9 +283,9 @@ Minecraft Task: The player is using an iron sword to attack and kill pigs in a f
 </div>
 
 
-<div id="outline-container-org5265c9a" class="outline-4 column">
-<h4 id="org5265c9a">Actions</h4>
-<div class="outline-text-4" id="text-org5265c9a">
+<div id="outline-container-orgac2586b" class="outline-4 column">
+<h4 id="orgac2586b">Actions</h4>
+<div class="outline-text-4" id="text-orgac2586b">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -308,9 +355,9 @@ Minecraft Task: The player is using an iron sword to attack and kill pigs in a f
 </div>
 </div>
 
-<div id="outline-container-orge995b2c" class="outline-3">
-<h3 id="orge995b2c"></h3>
-<div class="outline-text-3" id="text-orge995b2c">
+<div id="outline-container-orgc8a1736" class="outline-3">
+<h3 id="orgc8a1736"></h3>
+<div class="outline-text-3" id="text-orgc8a1736">
 <p>
 Bleeding Edge Task: The player is controlling a red robot &#x2026; fighting other characters &#x2026;<br />
 </p>
@@ -318,23 +365,23 @@ Bleeding Edge Task: The player is controlling a red robot &#x2026; fighting othe
 </div>
 
 
-<div id="outline-container-org36ae1c8" class="outline-3 irow">
-<h3 id="org36ae1c8"></h3>
-<div class="outline-text-3" id="text-org36ae1c8">
+<div id="outline-container-orgc88e6ff" class="outline-3 irow">
+<h3 id="orgc88e6ff"></h3>
+<div class="outline-text-3" id="text-orgc88e6ff">
 </div>
 
-<div id="outline-container-orgde8bc94" class="outline-4 column">
-<h4 id="orgde8bc94">Video</h4>
-<div class="outline-text-4" id="text-orgde8bc94">
+<div id="outline-container-org034fc8f" class="outline-4 column">
+<h4 id="org034fc8f">Video</h4>
+<div class="outline-text-4" id="text-org034fc8f">
 <p>
 <video width="100%" controls> <source src="AVL_Example_Videos/be_88/be.mp4" type="video/mp4"> </video><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdd1125f" class="outline-4 column">
-<h4 id="orgdd1125f">Actions</h4>
-<div class="outline-text-4" id="text-orgdd1125f">
+<div id="outline-container-orgfdd0fd8" class="outline-4 column">
+<h4 id="orgfdd0fd8">Actions</h4>
+<div class="outline-text-4" id="text-orgfdd0fd8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -378,9 +425,9 @@ Bleeding Edge Task: The player is controlling a red robot &#x2026; fighting othe
 </div>
 </div>
 
-<div id="outline-container-org58411f8" class="outline-3">
-<h3 id="org58411f8">Healthcare Examples</h3>
-<div class="outline-text-3" id="text-org58411f8">
+<div id="outline-container-orgbf2996a" class="outline-3">
+<h3 id="orgbf2996a">Healthcare Examples</h3>
+<div class="outline-text-3" id="text-orgbf2996a">
 <p>
 We fine-tuned our model on healthcare data and find that pre-training on robotics and gaming datasets provides some positive transfer for predicting actions. Below we show examples of our fine-tuned model performing various tasks in healthcare.<br />
 </p>
@@ -388,33 +435,34 @@ We fine-tuned our model on healthcare data and find that pre-training on robotic
 </div>
 
 
-<div id="outline-container-orgbc7d669" class="outline-3">
-<h3 id="orgbc7d669"></h3>
-<div class="outline-text-3" id="text-orgbc7d669">
+<div id="outline-container-org9e86645" class="outline-3">
+<h3 id="org9e86645"></h3>
+<div class="outline-text-3" id="text-org9e86645">
 <p>
 <i>Video Captioning</i><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9c30304" class="outline-3 irow">
-<h3 id="org9c30304"></h3>
-<div class="outline-text-3" id="text-org9c30304">
+<div id="outline-container-org46e56b4" class="outline-3 irow">
+<h3 id="org46e56b4"></h3>
+<div class="outline-text-3" id="text-org46e56b4">
 </div>
 
-<div id="outline-container-org3d27167" class="outline-4 column">
-<h4 id="org3d27167">Video</h4>
-<div class="outline-text-4" id="text-org3d27167">
+<div id="outline-container-orgfe54da1" class="outline-4 column">
+<h4 id="orgfe54da1">Video</h4>
+<div class="outline-text-4" id="text-orgfe54da1">
 <p>
-<image src="AVL_Example_Videos/healthcare/healthcare1.mp4_frame0.png" width="100%"><br />
+#<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/healthcare1.mpf_frame_0.png" type="video/mp4"> </video><br />
+<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/1-anon.mp4" type="video/mp4"> </video><br />
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orgf404390" class="outline-4 column">
-<h4 id="orgf404390">Actions</h4>
-<div class="outline-text-4" id="text-orgf404390">
+<div id="outline-container-org1651afa" class="outline-4 column">
+<h4 id="org1651afa">Actions</h4>
+<div class="outline-text-4" id="text-org1651afa">
 <p>
 The patient is awake and calm. The patient is cooperative. The patient is alert.<br />
 </p>
@@ -423,33 +471,34 @@ The patient is awake and calm. The patient is cooperative. The patient is alert.
 </div>
 
 
-<div id="outline-container-orgf61aec9" class="outline-3">
-<h3 id="orgf61aec9"></h3>
-<div class="outline-text-3" id="text-orgf61aec9">
+<div id="outline-container-orgda46080" class="outline-3">
+<h3 id="orgda46080"></h3>
+<div class="outline-text-3" id="text-orgda46080">
 <p>
 <i>Video Question Answering</i><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd684bc6" class="outline-3 irow">
-<h3 id="orgd684bc6"></h3>
-<div class="outline-text-3" id="text-orgd684bc6">
+<div id="outline-container-orgdb05733" class="outline-3 irow">
+<h3 id="orgdb05733"></h3>
+<div class="outline-text-3" id="text-orgdb05733">
 </div>
 
-<div id="outline-container-orge0dd871" class="outline-4 column">
-<h4 id="orge0dd871">Video</h4>
-<div class="outline-text-4" id="text-orge0dd871">
+<div id="outline-container-org34f2543" class="outline-4 column">
+<h4 id="org34f2543">Video</h4>
+<div class="outline-text-4" id="text-org34f2543">
 <p>
-<image src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" width="100%"><br />
+<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/2-anon.mp4" type="video/mp4"> </video><br />
+#<image src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" width="100%"><br />
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orgaf82272" class="outline-4 column">
-<h4 id="orgaf82272">Actions</h4>
-<div class="outline-text-4" id="text-orgaf82272">
+<div id="outline-container-org4522cb7" class="outline-4 column">
+<h4 id="org4522cb7">Actions</h4>
+<div class="outline-text-4" id="text-org4522cb7">
 <p>
 Q: Where is the patient? A: patient is in deep sedation. The patient likely requires assistance.<br />
 </p>
@@ -460,33 +509,33 @@ Q: Where is the patient? A: patient is in deep sedation. The patient likely requ
 
 
 
-<div id="outline-container-org19e64ff" class="outline-3">
-<h3 id="org19e64ff"></h3>
-<div class="outline-text-3" id="text-org19e64ff">
+<div id="outline-container-org9aa6cf0" class="outline-3">
+<h3 id="org9aa6cf0"></h3>
+<div class="outline-text-3" id="text-org9aa6cf0">
 <p>
 <i>Action recognition (RASS)</i><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc62d27d" class="outline-3 irow">
-<h3 id="orgc62d27d"></h3>
-<div class="outline-text-3" id="text-orgc62d27d">
+<div id="outline-container-org62c2a41" class="outline-3 irow">
+<h3 id="org62c2a41"></h3>
+<div class="outline-text-3" id="text-org62c2a41">
 </div>
 
-<div id="outline-container-orgec8d889" class="outline-4 column">
-<h4 id="orgec8d889">Video</h4>
-<div class="outline-text-4" id="text-orgec8d889">
+<div id="outline-container-orgbc6bf1d" class="outline-4 column">
+<h4 id="orgbc6bf1d">Video</h4>
+<div class="outline-text-4" id="text-orgbc6bf1d">
 <p>
-<image src="AVL_Example_Videos/healthcare/frame_0.jpg" width="100%"><br />
+<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/3-anon.mp4" type="video/mp4"> </video><br />
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org678c5a2" class="outline-4 column">
-<h4 id="org678c5a2">Actions</h4>
-<div class="outline-text-4" id="text-org678c5a2">
+<div id="outline-container-org4fac6ec" class="outline-4 column">
+<h4 id="org4fac6ec">Actions</h4>
+<div class="outline-text-4" id="text-org4fac6ec">
 <p>
 0 - Alert and calm<br />
 </p>
