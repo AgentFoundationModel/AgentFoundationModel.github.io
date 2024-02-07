@@ -77,21 +77,123 @@ The development of artificial intelligence systems is transitioning from creatin
 
 ** Robotics Examples
 
-FILLER TEXT
+We pre-train our model on the CALVIN and Language Table Datasets. Below we show example successful rollouts of our policy in randomized initial conditions in both environments.
 
+CALVIN:
+
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
+
+*** Open Drawer
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/open_drawer_1706692234.1586585.mp4" type="video/mp4"> </video>@@
+
+
+*** Move Slider Right
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/move_slider_right_1706691956.3111706.mp4" type="video/mp4"> </video>@@
+
+
+*** Lift Red Block
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/lift_red_block_slider_1706690975.078765.mp4" type="video/mp4"> </video>@@
+
+
+*** Close Drawer
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/close_drawer_1706690941.4207315.mp4" type="video/mp4"> </video>@@
+
+  
+# *** Move Slider Left
+#   :PROPERTIES:
+#   :html_container: div
+#   :html_container_class: column
+#   :END:
+
+#   @@html:<video width="50%" controls> <source src="AVL_Example_Videos/move_slider_left_1706691291.7631042.mp4" type="video/mp4"> </video>@@
+
+
+** 
+
+Language Table:
+
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
+
+*** Block to Absolute Location
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/blocktoabsolutelocation_41_success.mp4" type="video/mp4"> </video>@@
+
+
+*** Block to Block
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/blocktoblock_47_success.mp4" type="video/mp4"> </video>@@
+
+*** Block to Relative Location
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/blocktorelativelocation_27_success.mp4" type="video/mp4"> </video>@@
+
+  
+*** Separate Blocks
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/separate_27_success.mp4" type="video/mp4"> </video>@@
+
+
+# *** Block Relative to Another Block
+#   :PROPERTIES:
+#   :html_container: div
+#   :html_container_class: column
+#   :END:
+
+#   @@html:<video width="50%" controls> <source src="AVL_Example_Videos/blocktoblockrelativelocation_20_success.mp4" type="video/mp4"> </video>@@
+
+
+  
 
 ** Gaming Examples
 
-FILLER TEXT
+We also pre-train our model on datasets of Minecraft and Bleeding Edge videos annotated with actions. Below we show example predicted actions from our policy compared to ground truth actions taken by a player following specific instructions.
 
-** Healthcare Examples
 
-FILLER TEXT
-
- 
-** Human-AI Interaction Videos (OLD - REPLACE, just kept as code reference!)
-
-In the following videos, a human controls the blue player while a trained AI controls the green player. Self-play and Statistical Diversity are baselines while XP and CoMeDi are our techniques.
+Minecraft Task: The player is using an iron sword to attack and kill pigs in a forest ...
 
 
 ** 
@@ -100,70 +202,165 @@ In the following videos, a human controls the blue player while a trained AI con
   :html_container_class: irow
   :END:
 
-*** CoMeDi (Ours)
+*** Video
   :PROPERTIES:
   :html_container: div
   :html_container_class: column
   :END:
 
-  @@html:<video width="100%" controls> <source src="img/MP_new.mp4" type="video/mp4"> </video>@@
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/minecraft_15/minecraft.mp4" type="video/mp4"> </video>@@
 
 
-*** Cross-Play Min (XP)
+*** Actions
   :PROPERTIES:
   :html_container: div
   :html_container_class: column
   :END:
 
-  @@html:<video width="100%" controls> <source src="img/XP_new.mp4" type="video/mp4"> </video>@@
+  
+  | Ground Truth | Predicted Action |
+  |--------------+------------------|
+  |--------------+------------------|
+  | [CAMERAX7]   | [CAMERAX4]       |
+  | [CAMERAY22]  | [CAMERAY9]       |
+  |--------------+------------------|
+  | [CAMERAX0]   | [CAMERAX4]       |
+  | [CAMERAY2]   | [CAMERAY23]      |
+  |--------------+------------------|
+  | [attack]     | [attack]         |
+  | [CAMERAX-1]  |                  |
+  | [CAMERAY2]   |                  |
+  |--------------+------------------|
+  | [attack]     | [attack]         |
+  |--------------+------------------|
+  | [attack]     | [attack]         |
+
+** 
+
+Bleeding Edge Task: The player is controlling a red robot ... fighting other characters ...
 
 
-*** Statistical Diversity (ADAP)
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
+
+*** Video
   :PROPERTIES:
   :html_container: div
   :html_container_class: column
   :END:
 
-  @@html:<video width="100%" controls> <source src="img/ADAP_new.mp4" type="video/mp4"> </video>@@
+  @@html:<video width="100%" controls> <source src="AVL_Example_Videos/be_88/be.mp4" type="video/mp4"> </video>@@
 
-
-*** Self-Play (SP)
+*** Actions
   :PROPERTIES:
   :html_container: div
   :html_container_class: column
   :END:
 
-  @@html:<video width="100%" controls> <source src="img/SP_new.mp4" type="video/mp4"> </video>@@
+  | Ground Truth                            | Predicted Action                        |
+  |-----------------------------------------+-----------------------------------------|
+  |-----------------------------------------+-----------------------------------------|
+  | [lockon][meleeattack] [lrot159] [lmag4] | [specialability2] [lrot216] [lmag4]     |
+  |-----------------------------------------+-----------------------------------------|
+  | [lockon][meleeattack] [lrot159] [lmag4] | [lockon][meleeattack] [lrot159] [lmag4] |
+  |-----------------------------------------+-----------------------------------------|
+  | [lockon][meleeattack] [lrot159] [lmag4] | [lockon][meleeattack] [lrot159] [lmag4] |
+  |-----------------------------------------+-----------------------------------------|
+  | [lockon][meleeattack] [lrot160] [lmag4] | [lockon][meleeattack] [lrot162] [lmag4] |
+  |-----------------------------------------+-----------------------------------------|
+
+** Healthcare Examples
+
+We fine-tuned our model on healthcare data and find that pre-training on robotics and gaming datasets provides some positive transfer for predicting actions. Below we show examples of our fine-tuned model performing various tasks in healthcare.
+
+
+** 
+/Video Captioning/
+
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
+
+*** Video
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  # @@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/healthcare1.mpf_frame_0.png" type="video/mp4"> </video>@@
+  @@html:<image src="AVL_Example_Videos/healthcare/healthcare1.mp4_frame0.png" width="100%">@@
+
+
+*** Actions
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  The patient is awake and calm. The patient is cooperative. The patient is alert.
+
+
+** 
+/Video Question Answering/
+
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
+
+*** Video
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  # @@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" type="video/mp4"> </video>@@
+  @@html:<image src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" width="100%">@@
+
+
+*** Actions
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
+
+  Q: Where is the patient? A: patient is in deep sedation. The patient likely requires assistance.
 
 
 
-** Other examples
 
-FILLER TEXT
+** 
+/Action recognition (RASS)/
 
-Example Table
+** 
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: irow
+  :END:
 
-| Col 1     | Col 2          | Col 3         |
-|-----------+----------------+---------------|
-| SOMETHING | SOMETHING ELSE | ANOTHER THING |
-| NEXT ROW  | SDFLKJ         | LDKFSJLK      |
+*** Video
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
 
-
-
-
-
-
-
-
-
-
+  # @@html:<video width="100%" controls> <source src="AVL_Example_Videos/healthcare/healthcare3.mp4_frame0.png" type="video/mp4"> </video>@@
+  @@html:<image src="AVL_Example_Videos/healthcare/frame_0.jpg" width="100%">@@
 
 
+*** Actions
+  :PROPERTIES:
+  :html_container: div
+  :html_container_class: column
+  :END:
 
-
-
-
-
+  0 - Alert and calm
 
 #+html: </div>
 
@@ -194,7 +391,7 @@ Example Table
               <!-- </h3> -->
             <p class="text-justify">
               <br><br>
-              The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a> and <a href="https://robotics-transformer.github.io/">RT-1</a>
+              The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>
             </p>
 	  </div>
 	</div>
