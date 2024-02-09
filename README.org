@@ -362,26 +362,29 @@ We fine-tuned our model on healthcare data and find that pre-training on robotic
   0 - Alert and calm
 
 #+html: </div>
+#+html: </div>
 
 #+html:</div></div></div>
-# #+BEGIN_export html
-# <div class="row">
-# 	  <div class="col-md-8 col-md-offset-2">
-#             <h3>
-#               Citation
-#             </h3>
-#             <div class="form-group col-md-10 col-md-offset-1">
-#               <textarea id="bibtex" class="form-control" readonly>@inproceedings{sarkar2023diverse,
-# 	title={Diverse Conventions for Human-{AI} Collaboration},
-# 	author={Bidipta Sarkar and Andy Shih and Dorsa Sadigh},
-# 	booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-# 	year={2023}
-# }</textarea>
-#             </div>
-# 	  </div>
+#+BEGIN_export html
+<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+            <h3>
+              Citation
+            </h3>
+            <div class="form-group col-md-10 col-md-offset-1">
+              <textarea id="bibtex" class="form-control" readonly>@misc{durante2024interactive,
+      title={An Interactive Agent Foundation Model}, 
+      author={Zane Durante and Bidipta Sarkar and Ran Gong and Rohan Taori and Yusuke Noda and Paul Tang and Ehsan Adeli and Shrinidhi Kowshika Lakshmikanth and Kevin Schulman and Arnold Milstein and Demetri Terzopoulos and Ade Famoti and Noboru Kuno and Ashley Llorens and Hoi Vo and Katsu Ikeuchi and Li Fei-Fei and Jianfeng Gao and Naoki Wake and Qiuyuan Huang},
+      year={2024},
+      eprint={2402.05929},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
+}</textarea>
+            </div>
+	  </div>
 	  
-# 	</div>
-# #+END_export
+	</div>
+#+END_export
 #+BEGIN_export html
 	<div class="row">
 	  <div class="col-md-8 col-md-offset-2">
